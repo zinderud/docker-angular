@@ -14,6 +14,6 @@ sonraki adım contanier'imizi oluşturmak
 docker imagelarımızı görüntülemek için
 
     docker image ls
-docker imageımıza port olarak  4000 atayalım ve  calıştıktak sonra kapanınca silelim
+docker imageımıza port (-p) olarak  4000 atayalım ve  calıştıktak sonra kapanınca silelim (--rm)
  
-    docker run -p 3000:80 --rm sade
+    docker run -p 4000:80 --rm sade

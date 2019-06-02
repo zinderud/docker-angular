@@ -1,3 +1,8 @@
+
+# Run docker-compose -f docker-compose.prod.yml build
+# Run docker-compose -f docker-compose.prod.yml up
+# Live long and prosper
+
 version: '3.7'
 
 services:
@@ -11,12 +16,11 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    depends_on: 
-      - node
+    
     networks:
       - app-network
-
-    cadvisor:
+ 
+  cadvisor:
     container_name: cadvisor
     image: google/cadvisor
     volumes:

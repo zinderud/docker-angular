@@ -2,18 +2,16 @@
 Angular build and test
 
 
-
-oluşturduğumuz angular projemizi build edelim
-
-     ng build --prod
-
-sonraki adım contanier'imizi oluşturmak
-
-    docker image build -t sade .
-
-docker imagelarımızı görüntülemek için
-
-    docker image ls
-docker imageımıza port (-p) olarak  4000 atayalım ve  calıştıktak sonra kapanınca silelim (--rm)
  
-    docker run -p 4000:80 --rm sade
+
+
+
+Run npm install
+uygulama geliştirirken
+Run ng build --watch  
+docker run -p 8080:80 -v $(pwd)/dist/base:/usr/share/nginx/html nginx-angular
+ 
+
+# Run docker-compose -f docker-compose.prod.yml build
+# Run docker-compose -f docker-compose.prod.yml up
+
